@@ -1,1 +1,1 @@
-# HTML5 CSS and Javascript course
+# HTML5, CSS and Javascript course
