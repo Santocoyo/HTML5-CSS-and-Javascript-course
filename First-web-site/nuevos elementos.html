@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content=Type" content="text/html; charset=utf-8">
+    <title>Documento sin titulo</title>
+    <style>
+        #principal{
+            width:500px;
+            /*background-color: #00F;*/
+            text-align: center;
+            margin:15px auto;
+            padding:15px;
+            border:3px solid #F00;
+            border-radius:20px 5px 15px 40px;
+            box-shadow:#999 -5px 5px 5px;
+            background: -moz-linear-gradient(top, #00F, #3FF);
+            /*background: -webkit-linear-gradient(left, #00F, #3FF);*/
+            background: -ms-linear-gradient(top, #00F, #3FF);
+            background: -o-linear-gradient(top, #00F, #3FF);
+            background: -webkit-radial-gradient(center, ellipse, #F00, yellow);
+            /*outline: 2px dashed #00F;
+            outline-offset: 15px;*/
+            /*-webkit-transform: scale(-1);*/
+            /*-webkit-transform: rotate(5deg);*/
+            /*-webkit-transform: skew(30deg);*/
+            transition: transform 1s ease 0.5s;
+        }
+
+        #principal:hover{
+            transform: rotate(5deg);
+        }
+
+        @font-face{
+            font-family: 'Mi propia fuente';
+            src: url('BAUHS93.TTF');
+        }
+
+        #titulo{
+            font:bold 36px "Mi propia fuente";
+            text-shadow:#0F0 3px 3px 5px;
+            color: rgba(0, 0, 0, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <header id="principal">
+        <span id="titulo">Sitio web Yhea!</span>
+    </header>
+</body>
+
+
+</html>
