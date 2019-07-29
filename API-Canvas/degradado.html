@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Degradado</title>
+        <style>
+            section{
+                width:500px;
+                position:relative;
+                margin:auto;
+            }
+            /*#lienzo{
+                background-color:red;
+            }*/
+        </style>
+        <script>
+            function comenzar(){
+                var elemento=document.getElementById("lienzo");
+                lienzo=elemento.getContext("2d");
+                var degradado=lienzo.createRadialGradient(250,150,50,250,150,300);
+                degradado.addColorStop(0,"#f80a0a");
+                degradado.addColorStop(1,"#09fe03");
+                lienzo.fillStyle=degradado;
+                lienzo.fillRect(0,0,500,300);
+            }
+            window.addEventListener("load", comenzar, false);
+        </script>
+    </head>
+    <body>
+        <section id="dibujo">
+            <canvas id="lienzo" width="500" height="300">
+                Su navegador no soporta el elemento canvas
+            </canvas>
+        </section>
+    </body>
+</html>
