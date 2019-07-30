@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Transformaciones</title>
+        <style>
+            #lienzo{
+                border:1px solid red;
+            }
+            section{
+                width: 800px;
+                position:relative;
+                margin:auto;
+            }
+        </style>
+        <script>
+            function comenzar(){
+                var lienzo=document.getElementById("lienzo").getContext("2d");
+                lienzo.font="bold 20px verdana";
+                lienzo.fillText("Hola mundo", 50, 20);
+                lienzo.scale(3,3);
+                lienzo.translate(100,100);
+                lienzo.rotate(Math.PI);
+                lienzo.fillText("Hola mundo", -200, -150);
+            }
+            window.addEventListener("load", comenzar, false);
+        </script>
+    </head>
+    <body>
+        <section>
+            <canvas width="1200" height="900" id="lienzo">
+                Su navegador no soporta canvas
+            </canvas>
+        </section>
+    </body>
+</html>
