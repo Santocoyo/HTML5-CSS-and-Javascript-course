@@ -17,11 +17,16 @@
             function comenzar(){
                 var lienzo=document.getElementById("lienzo").getContext("2d");
                 lienzo.font="bold 20px verdana";
-                lienzo.fillText("Hola mundo", 50, 20);
-                lienzo.scale(3,3);
-                lienzo.translate(100,100);
-                lienzo.rotate(Math.PI);
-                lienzo.fillText("Hola mundo", -200, -150);
+                lienzo.save();
+                lienzo.fillText("hola mundo", 50, 50);
+                lienzo.translate(60,70);
+                lienzo.rotate(Math.PI/180*55);
+                lienzo.fillText("Hola mundo", 0, 0);
+                //lienzo.rotate(-Math.PI/180*55);
+                lienzo.restore();
+                lienzo.translate(300,400);
+                lienzo.scale(2,2);
+                lienzo.fillText("Hola mundo", 0, 0);
             }
             window.addEventListener("load", comenzar, false);
         </script>
