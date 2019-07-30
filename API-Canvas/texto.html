@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Texto canvas</title>
+        <style>
+            #lienzo{
+                border:1px solid red;
+            }
+            section{
+                width: 800px;
+                position:relative;
+                margin:auto;
+            }
+        </style>
+        <script>
+            function comenzar(){
+                var lienzo=document.getElementById("lienzo").getContext("2d");
+                lienzo.shadowColor="rgba(0,0,0,0.5)";
+                lienzo.shadowOffsetX=4;
+                lienzo.shadowOffsetY=4;
+                lienzo.shadowBlur=5;
+                lienzo.font="bold 48px verdana";
+                lienzo.textAlign="start";
+                lienzo.textBaseline="top"
+                lienzo.fillText("Hola mundo", 100,100);
+                var dimensiones=lienzo.measureText("Hola mundo");
+                //lienzo.strokeRect(100,100,dimensiones.width+10, 48+10);
+            }
+            window.addEventListener("load", comenzar, false);
+        </script>
+    </head>
+    <body>
+        <section>
+            <canvas width="800" height="600" id="lienzo">
+                Su navegador no soporta canvas
+            </canvas>
+        </section>
+    </body>
+</html>
