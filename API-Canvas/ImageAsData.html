@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Imagen como dato</title>
+        <style>
+            #lienzo{
+                border:1px solid red;
+            }
+            section{
+                width: 1200px;
+                position:relative;
+                margin:auto;
+            }
+        </style>
+        <script>
+            function comenzar(){
+                var elemento=document.getElementById("lienzo")
+                var lienzo=elemento.getContext("2d");
+                var imagen = new Image();
+                imagen.src="imagenes/skyrim.jpg";
+                imagen.addEventListener("load", manipularIamgen, false);
+                function manipularIamgen(e){
+                    imagen=e.target;
+                    lienzo.drawImage(imagen,0,0);
+                    var info_imagen=lienzo.getImageData(0,0,255,255);
+                    var posicion;
+                    for(x=0;x<=255;x++){
+                        for(y=0;y<=255;y++){
+                            posicion=(info_imagen.width*4*y)+(x*4);
+                            info_imagen.data[posicion]=255-info_imagen.data[posicion];
+                            info_imagen.data[posicion+1]=255-info_imagen.data[posicion+1];
+                            info_imagen.data[posicion+2]=255-info_imagen.data[posicion+2];
+                        }
+                    }
+                    lienzo.putImageData(info_imagen,255,0);
+                }
+            }
+            window.addEventListener("load", comenzar, false);
+        </script>
+    </head>
+    <body>
+        <section>
+            <canvas width="1200" height="900" id="lienzo">
+                Su navegador no soporta canvas
+            </canvas>
+        </section>
+    </body>
+</html>
