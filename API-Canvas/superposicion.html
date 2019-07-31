@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Superposición</title>
+        <style>
+            #lienzo{
+                border:1px solid red;
+            }
+            section{
+                width: 1200px;
+                position:relative;
+                margin:auto;
+            }
+        </style>
+        <script>
+            function comenzar(){
+                var elemento=document.getElementById("lienzo")
+                var lienzo=elemento.getContext("2d");
+                var imagen=new Image();
+                imagen.src="http://www.pildorasinformaticas.com/archivos/logos/html5online.jpg";
+                imagen.addEventListener("load", 
+                    function(){
+                        lienzo.drawImage(imagen,50,10, 75, 75, 0, 0, 300,300);
+                    }, 
+                    false)
+            }
+            window.addEventListener("load", comenzar, false);
+        </script>
+    </head>
+    <body>
+        <section>
+            <canvas width="1200" height="900" id="lienzo">
+                Su navegador no soporta canvas
+            </canvas>
+        </section>
+    </body>
+</html>
