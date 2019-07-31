@@ -16,30 +16,35 @@
         <script>
             var y=300;
             var estado="bajando";
+            var arriba=y;
+            var h=0;
             function comenzar(){
                 var elemento=document.getElementById("lienzo")
                 lienzo=elemento.getContext("2d");
-                setInterval(animacion,50);
+                setInterval(animacion,25);
             }
             function animacion(){
                 if(y<850 && estado=="bajando"){
                     lienzo.clearRect(0,0,1200,900);
                     lienzo.beginPath();
-                    lienzo.arc(500,y,40,0,Math.PI*2, false);
+                    lienzo.arc(h,y,40,0,Math.PI*2, false);
                     lienzo.fill();
                     y+=50;
+                    h+=8;
                 }
                 if(y==850){
                     estado="subiendo";
+                    arriba+=50;
                 }
-                if(y>50 && estado=="subiendo"){
+                if(y>=arriba && estado=="subiendo"){
                     lienzo.clearRect(0,0,1200,900);
                     lienzo.beginPath();
-                    lienzo.arc(500,y,40,0,Math.PI*2, false);
+                    lienzo.arc(h,y,40,0,Math.PI*2, false);
                     lienzo.fill();
                     y-=50;
+                    h+=8;
                 }
-                if(y==300){
+                if(y==arriba){
                     estado="bajando";
                 }
             }
