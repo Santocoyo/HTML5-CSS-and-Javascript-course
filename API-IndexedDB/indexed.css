@@ -1,0 +1,17 @@
+#contenedor{
+    width: 50%;
+    margin: auto;
+    padding-top: 50px;
+}
+#cajaformulario{
+    float:left;
+    padding: 20px;
+    border: 1px solid #00F;
+}
+#zonadatos{
+    float: right;
+    padding: 20px;
+    border: 1px solid #F00;
+    width: 200px;
+    margin-left: 10px;
+}
