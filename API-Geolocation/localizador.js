@@ -3,7 +3,8 @@ function comenzar(){
     miboton.addEventListener("click", obtener, false);
 }
 function obtener(){
-    navigator.geolocation.getCurrentPosition(mostrar_posicion);
+    var parametros={enableHighAccuracy: true, timeout:10000, maximumAge:60000};
+    navigator.geolocation.watchPosition(mostrar_posicion, gestion_errores, parametros);
 }
 function mostrar_posicion(posicion){
     var ubicacion=document.getElementById("ubicacion");
@@ -12,5 +13,11 @@ function mostrar_posicion(posicion){
     miubicacion+="Longitud: " + posicion.coords.longitude + "<br>";
     miubicacion+="Exactitud: " + posicion.coords.accuracy + "<br>";
     ubicacion.innerHTML=miubicacion;
+}
+function gestion_errores(error){
+    //alert("Ha habido un error" + error.code + " " + error.message);
+    if(error.code==1){
+        alert("¿Desea permitir el uso de la geolocalización en su navegador?")
+    }
 }
 window.addEventListener("load", comenzar, false);
