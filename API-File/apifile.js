@@ -47,4 +47,12 @@ function listar(archivos){
 function errores(e){
     alert("Ha habido un error: " + e.code);
 }
+function volver(){
+    espacio.getDirectory(ruta, null, function(dir_actual){
+        dir_actual.getParent(function(dir_padre){
+            ruta=dir_padre.fullPath;
+            mostrar();
+        }, errores);
+    }, errores);
+}
 window.addEventListener("load", comenzar, false);
