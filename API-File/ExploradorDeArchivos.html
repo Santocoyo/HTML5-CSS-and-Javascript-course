@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Explorador de archivos</title>
+        <link rel="stylesheet" href="estilos.css">
+        <script src="apifileX.js"></script>
+    </head>
+    <body>
+        <div id="contenedor">
+            <section id="zonaformulario">
+                <form name="formulario">
+                    <p>Fichero:  // CARPETA ORIGEN<br><input type="text" name="fichero" id="nom_fichero" required></p>
+                    <p>Directorio: // CARPETA DESTINO<br><input type="text" name="directorio" id="nom_directorio" required></p>    
+                    <p><input type="button" name="crear" id="crear" value="CREAR">&nbsp;
+                    <input type="button" name="eliminar" id="eliminar" value="ELIMINAR"></p>
+                    <p><input type="button" name="copiar" id="copiar" value="COPIAR">&nbsp;
+                    <input type="button" name="mover" id="mover" value="MOVER"></p>
+                    <p><input type="button" value="VOLVER" onClick="volver()"></p>
+                </form>    
+            </section>
+            <section id="zonadatos">
+                No hay información
+            </section>
+        </div>
+    </body>
+</html>
