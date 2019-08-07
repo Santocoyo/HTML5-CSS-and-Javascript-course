@@ -16,6 +16,16 @@
     margin-left: 20px;
     border: 2px dashed #00F;
 }
+#zonaprogreso{
+    color:#F00;
+    font-size: 36px;
+    text-align: center;
+    float: right;
+    width: 500px;
+    padding: 20px;
+    margin-left: 20px;
+    border: 2px dashed #00F;
+}
 .directorio{
     color:#0000FF;
     font-weight: bold;
