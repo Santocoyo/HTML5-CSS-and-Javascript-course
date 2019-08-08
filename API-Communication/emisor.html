@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Emisor</title>
+    <link rel="stylesheet" href="mensajes.css">
+    <script src="emisor_mensaje.js"></script>
+</head>
+<body>
+    <section id="zonadatos">
+        <iframe id="iframe" src="interno_iframe.html" width="500" height="350"></iframe>
+    </section>
+    <section id="zonarecepcion">
+        Mensaje desde página recepción
+    </section>
+    <section id="zonaformularios">
+        <form name="formulario">
+            Mensaje:
+            <p><textarea name="mensaje" cols="45" rows="10" id="mensaje" required></textarea></p>
+            <p><input type="button" name="boton" id="boton" value="Enviar Mensaje"></p>
+        </form>
+    </section>
+</body>
+</html>
