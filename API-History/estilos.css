@@ -1,0 +1,18 @@
+@charset "utf-8";
+#contenido{
+    float:left;
+    margin-left:50px;
+    padding:30px;
+    border: 2px dotted #F00;
+}
+#zonadatos{
+    float:left;
+    width: 600px;
+    padding: 30px;
+    margin-left:30px;
+    border: 2px dotted #00F;
+}
+#url{
+    color: #00F;
+    cursor: pointer;
+}
