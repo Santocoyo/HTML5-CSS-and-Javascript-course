@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta nttp-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Formulario</title>
+    </head>
+    <body>
+        <section>
+            <form name="miFormulario" id="miFormulario" method="GET" autocomplete="off">
+                Email:&nbsp;<input type="email" name="email" id="email" required multiple><br><br>
+                Buscar: &nbsp;<input type="search" name="busqueda" id="busqueda"><br><br>
+                Url: &nbsp;<input type="url" name="url" id="url" autofocus><br><br>
+                <!--Edad: &nbsp;<input type="number" name="edad" id="edad" min="0" max="100" step="5" placeholder="Multiplos de 5">-->
+                Edad: &nbsp;<input type="range" name="edad" id="edad" min="0" max="100" step="5"><br><br>
+                Fecha: &nbsp;<input type="date" name="fecha" id="fecha"><br><br>
+                Código postal: &nbsp;<input pattern="[0-9]{5}" name="codigopostal" id="codigopostal" placeholder="5 digitos">
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+        <img src="imagenes/minecraft.jpg" width="200" height="200">
+        <br>
+        Nombre: &nbsp;<input type="text" name="nombre" id="nombre" form="miFormulario">
+    </body>
+</html>
