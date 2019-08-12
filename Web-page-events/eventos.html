@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Eventos</title>
+        <script>
+            var imagen=new Array(3);
+            function tipoVideojuego(){
+                alert("Videojuego");
+            }
+            function manejaVideojuego(){
+                for(var i=0;i<4;i++){
+                    imagen[i]=document.getElementsByTagName("img")[i];
+                }
+                imagen[0].addEventListener("mouseover", function(){imagen[0].width=295;imagen[0].height=295;}, false);
+                imagen[0].addEventListener("mouseout", function(){imagen[0].width=225;imagen[0].height=225;}, false);
+                imagen[0].addEventListener("click", tipoVideojuego, false)
+
+                imagen[1].addEventListener("mouseover", function(){imagen[1].width=295;imagen[0].height=295;}, false);
+                imagen[1].addEventListener("mouseout", function(){imagen[1].width=225;imagen[0].height=225;}, false);
+                imagen[1].addEventListener("click", tipoVideojuego, false)
+
+                imagen[2].addEventListener("mouseover", function(){imagen[2].width=295;imagen[0].height=295;}, false);
+                imagen[2].addEventListener("mouseout", function(){imagen[2].width=225;imagen[0].height=225;}, false);
+                imagen[2].addEventListener("click", tipoVideojuego, false)
+
+                imagen[3].addEventListener("mouseover", function(){imagen[3].width=295;imagen[0].height=295;}, false);
+                imagen[3].addEventListener("mouseout", function(){imagen[3].width=225;imagen[0].height=225;}, false);
+                imagen[3].addEventListener("click", tipoVideojuego, false)
+            }
+            /*function crecer(){
+                imagen.width=295;
+                imagen.height=295;
+            }
+
+            function menguar(){
+                imagen.width=225;
+                imagen.height=225;
+            }*/
+            //window.onload=manejaVideojuego;
+            window.addEventListener("load", manejaVideojuego, false);
+        </script>
+    </head>
+    <body>
+        <p>
+            <img src="imagenes/minecraft.jpg">
+            &nbsp; &nbsp;
+            <img src="imagenes/skyrim.jpg">
+            &nbsp; &nbsp;
+            <img src="imagenes/halo.jpg">
+            &nbsp; &nbsp;
+            <img src="imagenes/lego.jpg">
+        </p>
+    </body>
+</html>
